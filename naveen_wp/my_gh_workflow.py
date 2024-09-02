@@ -1,10 +1,10 @@
 import httpx   # an HTTP client library and dependency of Prefect
-from prefect_branch.my_gh_workflow import flow, task
+from prefect import flow, task
 
 @task(retries=2)
 def get_repo_info(repo_owner: str, repo_name: str):
     """Get info about a repo - will retry twice after failing"""
-    url = f"https://api.github.com/repos/{NAVEENKANUGANTI}/{prefect_pratice_new}"
+    url = f"https://github.com/NAVEENKANUGANTI/prefect_pratice_new"
     api_response = httpx.get(url)
     api_response.raise_for_status()
     repo_info = api_response.json()
