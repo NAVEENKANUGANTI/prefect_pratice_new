@@ -1,6 +1,5 @@
 import httpx   # an HTTP client library and dependency of Prefect
-from prefect import flow, task
-
+from prefect_practice_new.my_gh_workflow import flow, task
 
 @task(retries=2)
 def get_repo_info(repo_owner: str, repo_name: str):
