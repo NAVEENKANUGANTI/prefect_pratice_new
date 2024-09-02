@@ -6,6 +6,6 @@ if __name__ == "__main__":
         entrypoint="my_gh_wf.py:prefect_pratice_new",
     ).deploy(
         name="my-first-deployment",
-        work_pool_name="my-managed-pool",
+        work_pool_name="my-work-pool",
         cron="0 1 * * *",
     )
